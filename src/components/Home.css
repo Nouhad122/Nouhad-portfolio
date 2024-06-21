@@ -1,0 +1,81 @@
+:root{
+    --fontColor: whitesmoke;
+    --bodyColor: #000;
+    --goldColor: #D4AF37;
+    --greyColor: #dcdcdc;
+}
+
+.home-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 85px);
+    width: 100%;
+}
+.home-description{
+    padding: 70px;
+    color: var(--fontColor);
+    width: 50%;
+}
+.home-description h1{
+    font-size: 6.5rem;
+}
+.home-description h3{
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.my-name{
+    color: var(--goldColor);
+}
+.home-description p{
+    color: var(--greyColor);
+    line-height: 25px;
+}
+
+.home-image img{
+    width: 35vw;
+}
+@media screen and (max-width: 1246px) {
+    .home-description{
+        padding: 40px;
+    }
+    .home-description h1{
+        font-size: 3.2rem;
+    }
+    .home-description h3{
+        font-size: 1rem;
+    }
+    .home-description p{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 680px){
+    .home-description{
+        padding: 10px;
+    }
+    .home-image{
+        display: none;
+    }
+    .home-description{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .home-description p{
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 407px){
+    .home-description h1{
+        font-size: 2.2rem;
+    }
+    .home-description h3{
+        font-size: .8rem;
+    }
+    .home-description p{
+        font-size: .6rem;
+        line-height: 15px;
+        white-space: wrap;
+    }
+}

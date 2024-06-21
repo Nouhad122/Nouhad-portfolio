@@ -1,0 +1,107 @@
+:root{
+    --fontColor: whitesmoke;
+    --bodyColor: #000;
+    --goldColor: #D4AF37;
+    --greyColor: #dcdcdc;
+}
+
+nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 0 20px;
+    height: 84px;
+    color: whitesmoke;
+    border-bottom: solid 1px var(--fontColor);
+    transition: .3s ease;
+}
+.logo{
+    object-fit: cover;
+    width: 100px;
+}
+.menu-list{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-size: 1.5rem;
+    transition: .6s ease;
+}
+.opened-menu-list{
+    top: 0 !important;
+}
+.menu-list li{
+    cursor: pointer;
+}
+.menu-list li:hover{
+    color: var(--goldColor);
+}
+.toggleMode{
+    background-color: var(--goldColor);
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+}
+.toggleMode .circle{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+}
+.menu-bar{
+    display: none;
+    font-size: 2.2rem;
+}
+.x-mark{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2.5rem;
+    display: none;
+}
+.transparent{
+    background-color: transparent !important;
+}
+.blur{
+    background-color: rgba(49, 49, 49, 0.911);
+}
+
+@media screen and (max-width: 1246px) {
+    .logo{
+        width: 70px;
+    }
+    .menu-list{
+        font-size: 1rem;
+    }
+    .toggleMode{
+        height: 20px;
+        width: 40px;
+    }
+}
+@media screen and (max-width: 636px) {
+    .menu-bar{
+        display: block;
+    }
+    .menu-list{
+        height: 100vh;
+        position: fixed;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        top: -100%;
+        background-color: var(--goldColor);
+    }
+    .x-mark{
+        display: block;
+    }
+}
+
