@@ -13,7 +13,7 @@ nav {
     position: -webkit-sticky; /* For Safari */
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 999;
     padding: 0 20px;
     height: 84px;
     color: whitesmoke;
@@ -67,7 +67,7 @@ nav {
     background-color: transparent !important;
 }
 .blur{
-    background-color: rgba(49, 49, 49, 0.911);
+    background-color: rgba(36, 36, 36, 0.804);
 }
 
 @media screen and (max-width: 1246px) {

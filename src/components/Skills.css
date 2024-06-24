@@ -1,7 +1,7 @@
 :root{
     --fontColor: whitesmoke;
     --bodyColor: #000;
-    --goldColor: gold;
+    --goldColor: #D4AF37;
     --secondColor: #dcdcdc;
 }
 
@@ -17,7 +17,7 @@
 .my-skills-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 30px;
+    grid-gap: 50px;
     padding: 50px;
 }
 .skill-box{
