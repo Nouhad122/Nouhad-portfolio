@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Nouhad-portfolio/static/css/main.6969efb6.css",
+    "main.js": "/Nouhad-portfolio/static/js/main.682abed6.js",
+    "static/media/soulayma-boutique.png": "/Nouhad-portfolio/static/media/soulayma-boutique.e6a126f71a792cb0c951.png",
+    "static/media/projects-statues.jpg": "/Nouhad-portfolio/static/media/projects-statues.7a901c0576ea82a5e829.jpg",
+    "static/media/statue2.png": "/Nouhad-portfolio/static/media/statue2.3d1b4a2c0e1d778f7570.png",
+    "static/media/club-connect.png": "/Nouhad-portfolio/static/media/club-connect.78fedb594ba4257d45bc.png",
+    "static/media/statue.png": "/Nouhad-portfolio/static/media/statue.9265d685c7b68a69e5e6.png",
+    "static/media/cruds.png": "/Nouhad-portfolio/static/media/cruds.4074767320a54233ebf3.png",
+    "static/media/logo.png": "/Nouhad-portfolio/static/media/logo.4d9200bbbbca4a2f2677.png",
+    "index.html": "/Nouhad-portfolio/index.html",
+    "main.6969efb6.css.map": "/Nouhad-portfolio/static/css/main.6969efb6.css.map",
+    "main.682abed6.js.map": "/Nouhad-portfolio/static/js/main.682abed6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6969efb6.css",
+    "static/js/main.682abed6.js"
+  ]
+}
