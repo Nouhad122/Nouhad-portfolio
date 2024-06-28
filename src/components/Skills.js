@@ -71,7 +71,7 @@ const Skills = () => {
             id: 6,
             title: 'Git',
             icon: faGit,
-            description: ` Git is a version control system that tracks changes in source code during software development.
+            description: `Git is a version control system that tracks changes in source code during software development.
              My expertise in Git includes using it for version control, collaboration, and project management.
               I am proficient in performing common Git operations such as branching, merging, and resolving conflicts,
                ensuring smooth and organized development workflows.`,
@@ -81,7 +81,7 @@ const Skills = () => {
             id: 7,
             title: 'OOP',
             icon: faCode,
-            description: ` OOP (Object-Oriented Programming) is a programming paradigm based on the concept of "objects".
+            description: `OOP (Object-Oriented Programming) is a programming paradigm based on the concept of "objects".
              I am familiar with handling OOP in several programming languages, including Java, C++, Python, and JavaScript.
               My understanding of OOP principles, such as inheritance, polymorphism, encapsulation, and abstraction,
                allows me to write clean, modular, and reusable code.`,
@@ -96,10 +96,10 @@ const Skills = () => {
             
         )
     }
-    console.log(skills);
+     
   return (
     <>
-    <div className='skills-section'>
+    <div id='skills' className='skills-section'>
         <div className='skills-header'>
             <h3>Skills</h3>
         </div>

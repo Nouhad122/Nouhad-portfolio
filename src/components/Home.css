@@ -32,10 +32,101 @@
     color: var(--greyColor);
     line-height: 25px;
 }
+.btn {
+    width: 220px;
+    height: 50px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background-color: var(--fontColor);
+    position: relative;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+  }
+  .btn:hover {
+    color: var(--goldColor);
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn:before,
+  .btn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: var(--goldColor);
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn:hover:before,
+  .btn:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
 
 .home-image img{
     width: 35vw;
 }
+
+.my-email{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    right: -210px;
+    bottom: 230px;
+    transform: rotate(90deg);
+    z-index: 500;
+    color: var(--fontColor);
+}
+.line1{
+    height: 2px;
+    width: 110px;
+    background-color: var(--goldColor);
+}
+.line2{
+    height: 2px;
+    width: 60px;
+    background-color: var(--goldColor);
+}
+.my-email h3{
+    font-size: 1.2rem;
+}
+.email-link:hover{
+    color: var(--goldColor);
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    left: -140px;
+    bottom: 158px;
+    transform: rotate(90deg);
+    z-index: 500;
+    color: var(--fontColor);
+}
+.social-icon{
+    font-size: 1.7rem;
+}
+.social-icon:hover{
+    color: var(--goldColor)
+}
+
 @media screen and (max-width: 1246px) {
     .home-description{
         padding: 40px;
@@ -48,6 +139,25 @@
     }
     .home-description p{
         font-size: .8rem;
+    }
+    .my-email h3{
+        font-size: 1rem;
+    }
+    .social-icon{
+        font-size: 1.3rem;
+    }
+    .my-email{
+        right: -200px;
+        bottom: 200px;
+    }
+    .social-media{
+        bottom: 140px;
+    }
+    .btn{
+        font-size: .8rem;
+        width: 160px;
+        height: 40px;
+        margin-top: 10px;
     }
 }
 @media screen and (max-width: 680px){

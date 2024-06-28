@@ -45,11 +45,11 @@ const Navbar = () => {
         <img className='logo' src={logo} alt='logo'/>
         <ul className={`${opened ? 'menu-list opened-menu-list' : 'menu-list'}`}>
         <FontAwesomeIcon onClick={closeMenuList} icon={faXmark} className='x-mark'/>
-          <li><Link to='Home'>Home</Link></li>
-          <li><Link to='Home'>About</Link></li>
-          <li><Link to='Home'>Skills</Link></li>
-          <li><Link to='Home'>Projects</Link></li>
-          <li><Link to='Home'>Resume</Link></li>
+          <li><Link className='menu-link' activeClass='active' to='home' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenuList}>Home</Link></li>
+          <li><Link className='menu-link' activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenuList}>About</Link></li>
+          <li><Link className='menu-link' activeClass='active' to='skills' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenuList}>Skills</Link></li>
+          <li><Link className='menu-link' activeClass='active' to='projects' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenuList}>Projects</Link></li>
+          <li><a className='menu-link' href='\my-transcript.pdf' target="_blank" rel="noopener noreferrer">Transcript</a></li>
         </ul>
         <div className='toggleMode'>
           <div className='circle'></div>

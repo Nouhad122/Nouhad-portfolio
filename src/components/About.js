@@ -5,7 +5,7 @@ import statue2 from '../../src/assets/statue2.png';
 const About = () => {
   return (
     <>
-      <div className='about-section'>
+      <div id='about' className='about-section'>
       <div className='about-image'>
             <img src={statue2}/>
         </div>

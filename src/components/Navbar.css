@@ -37,7 +37,7 @@ nav {
 .menu-list li{
     cursor: pointer;
 }
-.menu-list li:hover{
+.menu-link:hover{
     color: var(--goldColor);
 }
 .toggleMode{
@@ -69,6 +69,9 @@ nav {
 .blur{
     background-color: rgba(36, 36, 36, 0.804);
 }
+.active{
+    color: #D4AF37;
+}
 
 @media screen and (max-width: 1246px) {
     .logo{
@@ -98,7 +101,7 @@ nav {
         left: 0;
         padding: 20px;
         top: -100%;
-        background-color: var(--goldColor);
+        background-color: rgb(23, 23, 23);
     }
     .x-mark{
         display: block;
