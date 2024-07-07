@@ -15,7 +15,7 @@
 }
 .about-description{
     padding: 70px;
-    color: var(--fontColor);
+    color: var(--lightFontColor);
     width: 50%;
     align-items: center;
 }
@@ -23,20 +23,65 @@
     font-size: 4.5rem;
     margin-top: 5px;
     margin-bottom: 10px;
+    animation: opacity 3s ease;
 }
 .about-description h3{
     font-size: 1.2rem;
 }
 .my-major{
+    color: var(--blueColor);
+}
+.dark-major{
     color: var(--goldColor);
 }
 .about-description p{
-    color: var(--greyColor);
+    color: rgb(112, 112, 112);
     line-height: 25px;
+    animation: rightToLeft 3s ease;
+}
+.dark-parag{
+    color: rgb(185, 181, 181) !important;
 }
 
 .about-image img{
-    width: 35vw;
+    width: 25vw;
+    animation: imageRotation2 3s ease;
+}
+.dark-parag{
+    color: var(--darkFontColor);
+}
+@keyframes upToDown {
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes rightToLeft {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes opacity {
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
+}
+
+@keyframes imageRotation2 {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 @media screen and (max-width: 1246px) {
     .about-description{

@@ -1,10 +1,3 @@
-:root{
-    --fontColor: whitesmoke;
-    --bodyColor: #000;
-    --goldColor: #D4AF37;
-    --greyColor: #dcdcdc;
-}
-
 .home-section{
     display: flex;
     justify-content: space-around;
@@ -14,23 +7,36 @@
 }
 .home-description{
     padding: 70px;
-    color: var(--fontColor);
+    color: var(--lightFontColor);
     width: 50%;
 }
+.dark-font{
+    color: var(--darkFontColor);
+}
+
 .home-description h1{
     font-size: 6.5rem;
+    animation: upToDown 2s ease;
 }
 .home-description h3{
     font-size: 1.3rem;
     margin-top: 5px;
     margin-bottom: 15px;
+    animation: leftToRight 2s ease;
 }
 .my-name{
+    color: var(--blueColor);
+}
+.special-color{
     color: var(--goldColor);
 }
 .home-description p{
-    color: var(--greyColor);
+    color: rgb(112, 112, 112);
     line-height: 25px;
+    animation: leftToRight 2s ease;
+}
+.darkParag{
+ color: rgb(185, 181, 181) !important;
 }
 .btn {
     width: 220px;
@@ -38,18 +44,26 @@
     line-height: 42px;
     padding: 0;
     border: none;
-    background-color: var(--fontColor);
+    background-color: var(--blueColor);
     position: relative;
     margin-top: 30px;
     font-size: 1.2rem;
     font-weight: 500;
-    color: black;
+    color: whitesmoke;
     cursor: pointer;
+    animation: opacity 3s ease-in;
+  }
+  .dark-btn{
+    color: #000;
+    background-color: var(--goldColor);
+  }
+  .dark-btn:hover{
+    color: var(--goldColor) !important;
   }
   .btn:hover {
-    color: var(--goldColor);
+    color: var(--blueColor);
     background: transparent;
-     box-shadow:none;
+    box-shadow:none;
   }
   .btn:before,
   .btn:after{
@@ -59,12 +73,16 @@
     right:0;
     height:2px;
     width:0;
-    background: var(--goldColor);
+    background-color: var(--blueColor);
     box-shadow:
      -1px -1px 5px 0px #fff,
      7px 7px 20px 0px #0003,
      4px 4px 5px 0px #0002;
     transition:400ms ease all;
+  }
+  .dark-btn:before,
+  .dark-btn:after{
+    background: var(--goldColor) !important;
   }
   .btn:after{
     right:inherit;
@@ -80,6 +98,7 @@
 
 .home-image img{
     width: 35vw;
+    animation: imageRotation 3s ease;
 }
 
 .my-email{
@@ -96,17 +115,26 @@
 .line1{
     height: 2px;
     width: 110px;
-    background-color: var(--goldColor);
+    background-color: var(--blueColor);
 }
 .line2{
     height: 2px;
     width: 60px;
+    background-color: var(--blueColor);
+}
+.dark-line{
     background-color: var(--goldColor);
 }
 .my-email h3{
     font-size: 1.2rem;
 }
-.email-link:hover{
+.email-link{
+    color: var(--lightFontColor);
+}
+.email:hover{
+    color: var(--blueColor);
+}
+.dark-email:hover{
     color: var(--goldColor);
 }
 .social-media{
@@ -118,15 +146,58 @@
     bottom: 158px;
     transform: rotate(90deg);
     z-index: 500;
-    color: var(--fontColor);
+    color: var(--lightFontColor);
+}
+.dark-font{
+    color: var(--darkFontColor);
 }
 .social-icon{
     font-size: 1.7rem;
 }
 .social-icon:hover{
-    color: var(--goldColor)
+    color: var(--blueColor);
 }
-
+.dark-icon:hover{
+    color: var(--goldColor);
+}
+.contact-link{
+    color: var(--lightFontColor);
+}
+.dark-link{
+    color: var(--darkFontColor) !important;
+}
+@keyframes upToDown {
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes leftToRight {
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes opacity {
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
+}
+@keyframes imageRotation {
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
 @media screen and (max-width: 1246px) {
     .home-description{
         padding: 40px;

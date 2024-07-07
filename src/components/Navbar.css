@@ -1,11 +1,4 @@
-:root{
-    --fontColor: whitesmoke;
-    --bodyColor: #000;
-    --goldColor: #D4AF37;
-    --greyColor: #dcdcdc;
-}
-
-nav {
+.navbar {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -16,9 +9,13 @@ nav {
     z-index: 999;
     padding: 0 20px;
     height: 84px;
-    color: whitesmoke;
-    border-bottom: solid 1px var(--fontColor);
+    color: var(--lightFontColor);
+    border-bottom: solid 1px var(--lightFontColor);
     transition: .3s ease;
+}
+.dark-navbar{
+    color: var(--darkFontColor) !important;
+    border-bottom: solid 1px var(--darkFontColor);
 }
 .logo{
     object-fit: cover;
@@ -37,20 +34,40 @@ nav {
 .menu-list li{
     cursor: pointer;
 }
-.menu-link:hover{
-    color: var(--goldColor);
+.menu-link{
+    color: var(--lightFontColor);
 }
+.dark-menu-link{
+    color: var(--darkFontColor) !important;
+}
+.menu-link:hover{
+    color: var(--blueColor);
+}
+.dark-menu-link:hover{
+    color: var(--goldColor) !important;
+
+}
+
 .toggleMode{
-    background-color: var(--goldColor);
+    background-color: rgb(205, 205, 205);
     width: 60px;
     height: 30px;
     border-radius: 20px;
+    cursor: pointer;
+}
+.dark-toggle{
+    background-color: whitesmoke !important;
 }
 .toggleMode .circle{
-    background-color: white;
+    background-color: rgb(61, 61, 226);
     width: 50%;
     height: 100%;
     border-radius: 50%;
+    transition: .3s ease;
+}
+.circle-dark-mode{
+    transform: translateX(100%);
+    background-color: rgb(86, 86, 86) !important;
 }
 .menu-bar{
     display: none;
@@ -67,10 +84,16 @@ nav {
     background-color: transparent !important;
 }
 .blur{
+    background-color: rgba(218, 212, 255, 0.685);
+}
+.dark-blur{
     background-color: rgba(36, 36, 36, 0.804);
 }
 .active{
-    color: #D4AF37;
+    color: var(--blueColor) !important;
+}
+.dark-active{
+    color: var(--goldColor) !important;
 }
 
 @media screen and (max-width: 1246px) {
@@ -101,10 +124,14 @@ nav {
         left: 0;
         padding: 20px;
         top: -100%;
-        background-color: rgb(23, 23, 23);
+        background-color: whitesmoke;
+        z-index: 999;
     }
     .x-mark{
         display: block;
+    }
+    .dark-list{
+        background-color: rgb(23, 23, 23);
     }
 }
 

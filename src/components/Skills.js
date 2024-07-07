@@ -4,7 +4,7 @@ import '../components/Skills.css';
 import { faDatabase,faCode } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5,faCss3Alt,faJs,faReact,faBootstrap,faGit } from '@fortawesome/free-brands-svg-icons';
 
-const Skills = () => {
+const Skills = ({darkMode}) => {
     const [skills,setSkills] = useState([
         {
             id:0,
@@ -100,13 +100,13 @@ const Skills = () => {
   return (
     <>
     <div id='skills' className='skills-section'>
-        <div className='skills-header'>
+        <div className={`${darkMode ? 'skills-header dark-header': 'skills-header'}`}>
             <h3>Skills</h3>
         </div>
         <div className='my-skills-container'>
         {
             skills.map(skill =>(
-                <div key={skill.id} className={skill.isOpened ? 'skill-box skill-box-opened' : 'skill-box'} onClick={() => toggleOpenBox(skill.id)}>
+                <div key={skill.id} className={skill.isOpened ? `${darkMode ? 'skill-box skill-box-opened dark-skill' : 'skill-box skill-box-opened'}` : `${darkMode ? 'skill-box dark-skill': 'skill-box'}`} onClick={() => toggleOpenBox(skill.id)}>
                 <FontAwesomeIcon className='skill-icon' icon={skill.icon} />
                 <h2>{skill.title}</h2>
                 <p>{skill.description}</p>

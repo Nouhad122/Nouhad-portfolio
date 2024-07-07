@@ -1,0 +1,33 @@
+:root{
+    --darkFontColor: whitesmoke;
+    --darkBodyColor: #000;
+    --goldColor: gold;
+    --darkGreyColor: #dcdcdc;
+    --darkPencilColor: rgb(32, 31, 31);
+    --lightBodyColor: whitesmoke;
+    --lightFontColor: #000;
+    --blueColor: rgb(0, 67, 251);
+    --lightGreyColor: #6d6c6c;
+    --lightPencilColor: rgba(160, 155, 155, 0.815);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.light-mode{
+    background-color: var(--lightBodyColor) !important;
+}
+.dark-mode{
+    background-color: var(--darkBodyColor) !important;
+}
+
+a{
+    text-decoration: none;
+}
+

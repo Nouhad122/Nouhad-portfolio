@@ -1,9 +1,3 @@
-:root{
-    --fontColor: whitesmoke;
-    --bodyColor: #000;
-    --goldColor: #D4AF37;
-    --secondColor: #dcdcdc;
-}
 .projects-section{
   padding: 30px;
 }
@@ -11,7 +5,10 @@
     text-align: center;
     width: 100%;
     font-size: 1.5rem;
-    color: var(--fontColor);
+    color: var(--lightFontColor);
+}
+.dark-header{
+    color: var(--darkFontColor);
 }
 .projects-container{
     display: grid;
@@ -27,7 +24,9 @@
     left: 0;
     box-shadow: 0px 3px 10px 10px transparent;
     transition: .6s ease;
+    animation: opacity 3s ease;
 }
+
 .dark-background{
     background-color: rgba(0, 0, 0, 0.642);
     width: 100%;
@@ -38,13 +37,17 @@
     z-index: 190;
 }
 .project-title{
-    background-color: rgb(32, 31, 31);
+    background-color: var(--lightPencilColor);
     position: absolute;
     z-index: 200;
     width: 100%;
     padding: 20px;
     text-align: center;
-    color: var(--fontColor);
+    color: var(--lightFontColor);
+}
+.dark-title{
+    background-color: var(--darkPencilColor);
+    color: var(--darkFontColor);
 }
 .project-description{
     background-color: rgba(0, 0, 0, 0.726);
@@ -75,14 +78,17 @@
     content: '';
     width: 100%;
     height: 100%;
-    background-image: url(../../src/assets/projects-statues.jpg);
+    background-image: url(../../src/assets/projects-robot.jpg);
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 200;
     transition: 1.2s ease;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
+}
+.dark-project-box::before{
+    background-image: url(../../src/assets/projects-statues.jpg) !important;
 }
 .project-box:hover::before{
     height: 0;
@@ -92,6 +98,9 @@
     opacity: 0;
 }
 .project-box:hover{
+    box-shadow: 0px 3px 10px 10px var(--blueColor);
+}
+.dark-project-box:hover{
     box-shadow: 0px 3px 10px 10px var(--goldColor);
 }
 .project-box img{
@@ -102,6 +111,14 @@
     left: 0;
     z-index: 149;
     filter: blur(1px);
+}
+@keyframes opacity {
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
 }
 @media screen and (max-width: 1450px){
     .projects-header{

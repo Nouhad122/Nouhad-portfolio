@@ -6,8 +6,8 @@ import '../components/Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faBootstrap, faGit, faPython } from '@fortawesome/free-brands-svg-icons';
 
-const Projects = () => {
-  const [projects, setProjects] = useState([
+const Projects = ({darkMode}) => {
+  const projects = ([
     {
       id: 0,
       title: "ClubConnect",
@@ -68,14 +68,14 @@ const Projects = () => {
   return (
     <>
       <div id='projects' className='projects-section'>
-        <div className='projects-header'>
+        <div className={darkMode ? 'projects-header dark-header': 'projects-header'}>
           <h3>Projects</h3>
         </div>
         <div className='projects-container'>
           {projects.map(project => (
             <a href={project.url} target='_blank' rel='noopener noreferrer' key={project.id}>
-              <div className='project-box'>
-                <h1 className='project-title'>{project.title}</h1>
+              <div className= {darkMode ? 'project-box dark-project-box' : 'project-box'}>
+                <h1 className={darkMode ? 'project-title dark-title' : 'project-title'}>{project.title}</h1>
                 <img src={project.image} alt={project.title} />
                 <div className='project-technologies'>
                   {renderIcons([project.icon1, project.icon2, project.icon3, project.icon4, project.icon5, project.icon6], project.id)}
